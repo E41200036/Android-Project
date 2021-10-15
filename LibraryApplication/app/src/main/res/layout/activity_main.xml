@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        // header
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/header_background"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="20dp">
+            // header - button
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/ic_baseline_dehaze_24" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_baseline_search_24" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+                // profile image
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/img2" />
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsbold"
+                        android:text="Adney Schoctler's"
+                        android:textColor="@color/fontWhite"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Adney@outlook.com"
+                        android:textColor="@color/fontWhite"
+                        android:textSize="12dp" />
+
+                    <Button
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_button"
+                        android:backgroundTint="#2D732E"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Follow"
+                        android:textAllCaps="false"
+                        android:textColor="@color/fontWhite"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        // content
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+            // Divider - library
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/poppinsextrabold"
+                android:text="The Library"
+                android:textColor="@color/fontPrimary"
+                android:textSize="18dp" />
+
+            // content - library
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    // Book
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/recycler_view_book"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            // Workshop
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/poppinsextrabold"
+                android:text="Workshops"
+                android:textColor="@color/fontPrimary"
+                android:textSize="18dp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    // content
+
+                    <LinearLayout
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="0dp">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/img4" />
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinssemibold"
+                                android:text="Upcoming Workshops"
+                                android:textColor="@color/fontPrimary"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppinsregular"
+                                android:text="It is a long established fact that a reader will be"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="0dp">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/img6" />
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinssemibold"
+                                android:text="Design Sprint Workshop"
+                                android:textColor="@color/fontPrimary"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppinsregular"
+                                android:text="It is a long established fact that a reader will be distracted by"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            // Podcast
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/poppinsextrabold"
+                android:text="Podcast"
+                android:textColor="@color/fontPrimary"
+                android:textSize="18dp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:scrollbars="none"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_marginEnd="40dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            app:cardCornerRadius="40dp"
+                            app:cardElevation="0dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/img6" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Queens"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:textColor="@color/fontSecondary"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center_horizontal"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginEnd="40dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            app:cardCornerRadius="40dp"
+                            app:cardElevation="0dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/img4" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Marry"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:textColor="@color/fontSecondary"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center_horizontal"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginEnd="40dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            app:cardCornerRadius="40dp"
+                            app:cardElevation="0dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/img2" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Queens"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:textColor="@color/fontSecondary"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center_horizontal"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginEnd="40dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            app:cardCornerRadius="40dp"
+                            app:cardElevation="0dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/img4" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lanny"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:textColor="@color/fontSecondary"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center_horizontal"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/txt_copyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Made with love by @ibnnu"
+            android:fontFamily="@font/poppinsmedium"
+            android:textColor="@color/fontSecondary"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp"/>
+    </LinearLayout>
+
+</ScrollView>
