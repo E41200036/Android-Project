@@ -17,3 +17,7 @@
 
 ![Screenshot_2021-10-05-20-15-38-71](https://user-images.githubusercontent.com/78123715/136030548-e275df51-56a6-4b2e-ba7d-51cd35fe3f71.png)
 
+# Output Fragment
+![image](https://user-images.githubusercontent.com/78123715/137067851-d6a910a5-ecab-4fd1-9f71-fef4079d217b.png)
+
+
