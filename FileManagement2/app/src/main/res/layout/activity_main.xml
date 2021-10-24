@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:layout_marginHorizontal="30dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="sans-serif-medium"
+        android:textAllCaps="true"
+        android:text="Write your daily"
+        android:textColor="#000" />
+
+    <EditText
+        android:id="@+id/txt_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#000" />
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_private_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Private Save"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_marginStart="10dp"
+            android:id="@+id/btn_public_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Public Save"
+            android:textAllCaps="false" />
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_view"
+        android:text="Click to View"
+        android:textAllCaps="false"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"/>
+
+
+</LinearLayout>
